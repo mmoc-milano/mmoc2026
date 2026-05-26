@@ -1,11 +1,56 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MMOC Conference</title>
+
+    <style>
+      body {
+        margin: 0;
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        text-align: center;
+        padding: 60px 20px 30px;
+      }
+
+      h1 {
+        font-size: 72px;
+        margin-bottom: 30px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      nav a:hover {
+        color: #8b7cff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>MMOC Conference</h1>
+
+      <nav>
+        <a href="/description">Description</a>
+        <a href="/participation">Participation</a>
+        <a href="/sponsors">Sponsors</a>
+      </nav>
+    </header>
+  </body>
+</html>
