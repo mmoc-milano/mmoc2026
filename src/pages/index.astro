@@ -121,6 +121,66 @@
         line-height: 1.7;
         font-size: 18px;
       }
+/*
+      .sponsor-logo {
+  background-color: white;
+  padding: 10px;      /* opzionale: crea “bordo” bianco attorno */
+  box-sizing: border-box;
+   max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+
+}
+*/
+/* GRIGLIA RESPONSIVE */
+.sponsors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  align-items: center;
+  justify-items: center;
+  
+  margin-top: 30px;
+  margin-bottom: 100px;
+  
+}
+  
+  #sponsors p {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #9a9a9a;
+}
+
+/* BOX LOGO */
+.sponsor-item {
+  background: white;
+  width: 160px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  padding: 12px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* IMMAGINE UNIFORME */
+.sponsor-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* HOVER ELEGANTE */
+.sponsor-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
     </style>
   </head>
 
@@ -165,6 +225,10 @@
     <section id="participation">
       <h2>Participation</h2>
 
+      <p style="text-align: center; font-weight: bold; margin-bottom: 40px;">
+      Registration closes on the 3rd of September.  
+      </p>
+
       <p>
         Registration is now open! It is optional for those who simply wish to attend the conference and mandatory for PhD students in Chemistry and Industrial Chemistry from UNIMI who wish to present a poster.
       </p>
@@ -173,9 +237,23 @@
     <section id="sponsors">
       <h2>Sponsors</h2>
 
+
+    <div class="sponsors">
+      <div class="sponsor-item">
+        <img src="images/ZENTEK_SCI.png" alt="Sponsor 1">
+
+      <!--   
+      <div class="sponsor-item">
+        <img src="images/logo2.png" alt="Sponsor 2">
+      </div>
+      -->
+
+    </div>
+
       <p>
-        Sponsors information will be available soon.
+        More sponsors coming soon.
       </p>
+     
     </section>
 
   </body>
