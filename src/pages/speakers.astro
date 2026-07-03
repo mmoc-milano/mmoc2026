@@ -1,0 +1,188 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const speakers = [
+  {
+    name: "Michelangelo Sistilii",
+    img: "/images/sistilii.jpg",
+    supervisor: "Ivan Grigioni",
+    research: "Photoelectrochemistry, semiconductor photoelectrodes, and solar fuels",
+    email: "michelangelo.sistilii@unimi.it"
+  },
+  {
+    name: "Arianna Gorgoni",
+    img: "/images/gorgoni.jpg",
+    supervisor: "Anna Bernardi",
+    research: "...",
+    email: "arianna.gorgoni@unimi.it"
+  },
+  {
+    name: "Francesca Tanda",
+    img: "/images/tanda.jpg",
+    supervisor: "Monica Civera",
+    research: "Computational drug discovery, structure-based design, molecular docking and dynamics, machine learning for protein–ligand interactions",
+    email: "francesca.tanda@unimi.it"
+  },
+  {
+    name: "Alessia Santiglia",
+    img: "/images/santiglia.jpg",
+    supervisor: "Vittoria Guglielmi",
+    research: "Raman spectroscopy, SERS, IR spectroscopy, GC-MS, electron microscopy, chemistry for cultural heritage",
+    email: "alessia.santiglia@unimi.it"
+  },
+  {
+    name: "Sara Oregioni",
+    img: "/images/oregioni.jpeg",
+    supervisor: "Rocco Martinazzo",
+    research: "Condensed matter physics, quantum dynamics, non-adiabatic effects",
+    email: "sara.oregioni@unimi.it"
+  },
+  {
+    name: "Andrea Gotti",
+    img: "/images/gotti.jpg",
+    supervisor: "Andrea Pinto",
+    research: "Organic synthesis, natural products chemistry",
+    email: "andrea.gotti@unimi.it"
+  },
+  {
+    name: "Andrea Trapletti",
+    img: "/images/trapletti.png",
+    supervisor: "Carlo Castellano",
+    research: "...",
+    email: "andrea.trapletti@unimi.it"
+  },
+  {
+    name: "Margherita Vacchini",
+    img: "/images/vacchini.jpg",
+    supervisor: "Leonardo Lo Presti",
+    research: "nucleation theory, solid-state chemistry, classical methods",
+    email: "margherita.vacchini@unimi.it"
+  },
+  
+  {
+    name: "Lorenzo Favier",
+    img: "/images/favier.jpg",
+    supervisor: "Anna Bernardi",
+    research: "...",
+    email: "lorenzo.favier@unimi.it"
+  },
+  {
+    name: "Federico Uggeri",
+    img: "/images/uggeri.jpeg",
+    supervisor: "Alberto Dal Corso",
+    research: "...",
+    email: "federico.uggeri@unimi.it"
+  },
+  {
+    name: "Francesco Migliano",
+    img: "/images/migliano.jpeg",
+    supervisor: "Daniele Passarella",
+    research: "Organic synthesis, Natural products Chemistry, Total synthesis, Methodology",
+    email: "francesco.migliano@unimi.it"
+  },
+  {
+    name: "Gabriele Stucchi",
+    img: "/images/stucchi.jpg",
+    supervisor: "Valentina Colombo",
+    research: "...",
+    email: "gabriele.stucchi@unimi.it"
+  },
+  {
+    name: "Giusi Aresta",
+    img: "/images/aresta.jpeg",
+    supervisor: "Luigi Lay",
+    research: "Chemistry for the Life Sciences: synthesis of peptides, carbohydrates and their mimics",
+    email: "giusi.aresta@unimi.it"
+  },
+  {
+    name: "Mohini Burnwal",
+    img: "/images/mohini.jpg",
+    supervisor: "Luigi Lay",
+    research: "...",
+    email: "mohini.burnwal@unimi.it"
+  },
+  {
+    name: "Rachel Carpaye",
+    img: "/images/carpaye.jpeg",
+    supervisor: "Luigi Lay",
+    research: "Carbohydrate synthesis, Glycoscience",
+    email: "rachel.carpaye@unimi.it"
+  }
+
+
+];
+
+---
+
+<Layout title="Speakers - MMOC 2026">
+
+  <main class="container">
+    <h1>Speakers</h1>
+
+     {speakers.map((s) => (
+      <div class="speaker">
+        <img src={s.img} alt={s.name} />
+
+        <div class="info">
+          <h3>{s.name}</h3>
+
+      <p>
+        <strong>Supervisor:</strong> {s.supervisor}
+      </p>
+
+      <p>
+        <strong>Research Interests:</strong> {s.research}
+      </p>
+
+      <p>
+        <strong>E-mail:</strong> {s.email}
+      </p>
+        </div>
+      </div>
+    ))}
+
+
+  </main>
+
+</Layout>
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 0 20px;
+    color: white;
+  }
+
+  h1 {
+    color: #c96a2b;
+    margin-bottom: 40px;
+  }
+
+  .speaker {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+  }
+
+  .speaker img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .info h3 {
+    margin: 0 0 10px;
+    color: #0f8b8d;
+  }
+
+  .info p {
+    margin: 0;
+    color: #ccc;
+  }
+</style>
