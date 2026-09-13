@@ -1,0 +1,13 @@
+[33mcommit 178fce77947e6108f454a0da95b1d2acf64adf5e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MargheritaV00 <margherita.vacchini@unimi.it>
+Date:   Sun Sep 13 10:49:04 2026 +0200
+
+    added invited speakers and schedule
+
+ public/images/andrea-bonetti.jpeg     | Bin [31m0[m -> [32m11937[m bytes
+ public/images/annalisa-polo.jpeg      | Bin [31m0[m -> [32m16274[m bytes
+ public/images/gilberto-corbellini.png | Bin [31m0[m -> [32m506211[m bytes
+ public/images/paolo-pollesel.jpeg     | Bin [31m0[m -> [32m4458[m bytes
+ public/schedule.pdf                   | Bin [31m0[m -> [32m1217551[m bytes
+ src/pages/index.astro                 | 154 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m[31m-----------[m
+ 6 files changed, 143 insertions(+), 11 deletions(-)
