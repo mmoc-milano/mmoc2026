@@ -1,4 +1,31 @@
 ---
+const keynoteSpeaker = {
+  name: "Gilberto Corbellini",
+  affiliation: "Full Professor - Sapienza University of Rome",
+  bio: "Professor Gilberto Corbellini is an historian, essayist, and epistemologist; his academic interests lie in the history and philosophy of medicine, bioethics, and naturalistic political philosophy.",
+  photo: "images/gilberto-corbellini.png",
+};
+
+const speakers = [
+  {
+    name: "Annalisa Polo",
+    affiliation: "RSE - Researcher",
+    bio: "After obtaining her PhD in Chemistry at University of Milan, Annalisa moved to industry research and joined the RSE group, focused on electrocatalysis and sustainability.",
+    photo: "mmoc2026/images/annalisa-polo.jpeg",
+  },
+  {
+    name: "Andrea Bonetti",
+    affiliation: "Indena - Researcher",
+    bio: "After obtaining his PhD in Chemistry at University of Milan, Andrea has joined the Indena group more than ten years ago, one of the major italian industries focused on pharmaceutical manufacturing.",
+    photo: "mmoc2026/images/andrea-bonetti.jpeg",
+  },
+  {
+    name: "Paolo Pollesel",
+    affiliation: "ENI - Vice President at Eni",
+    bio: "After obtaining his Master's Degree in Industrial Chemistry at University of Milan, Paolo has joined the R&D ENI group - now Renewable Energy & Environmental R&D - more than thirteen years ago.",
+    photo: "mmoc2026/images/paolo-pollesel.jpeg",
+  },
+];
 ---
 
 <html lang="it">
@@ -229,28 +256,133 @@
       <h2>Participation</h2>
 
       <p style="text-align: center; font-weight: bold; margin-bottom: 40px;">
-      Registration closes on the 3rd of September.  
+      Registration is closed.  
       </p>
 
-      <p>
-        Registration is now open! It is optional for those who simply wish to attend the conference and mandatory for PhD students in Chemistry and Industrial Chemistry from UNIMI who wish to present a poster.
-      </p>
     </section>
 
-    <section id="schedule">
-      <h2>Schedule</h2>
+<section id="schedule">
+  <h2>Schedule</h2>
 
-      <p>
-        Detailed schedule will be available soon.
-      </p>
-    </section>
+  <div class="pdf-embed">
+    <embed src="/mmoc2026/schedule.pdf" type="application/pdf" width="100%" height="800px" />
+    <p class="pdf-fallback">
+      Can't see the PDF?
+      <a href="/mmoc2026/schedule.pdf" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  .pdf-embed {
+    margin-top: 1rem;
+  }
+
+  .pdf-embed embed {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .pdf-fallback {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .pdf-embed embed {
+      height: 500px;
+    }
+  }
+</style>
+
+
+<section id="invited_speakers">
+  <h2>Invited Speakers</h2>
+
+  <p>
+    We are proud to announce the following invited speakers for MMOC 2026:
+  </p>
+
+
+  <h3 class="day-label">Day 1 - 23rd of September</h3>
+  <div class="speakers-grid">
+    <img src={`${import.meta.env.BASE_URL}${keynoteSpeaker.photo}`} alt={keynoteSpeaker.name} class="speaker-photo" />
+    <div class="speaker-info">
+      <h3>{keynoteSpeaker.name}</h3>
+      <p class="speaker-affiliation">{keynoteSpeaker.affiliation}</p>
+      <p class="speaker-bio">{keynoteSpeaker.bio}</p>
+    </div>
+  </div>
+
+  <h3 class="day-label">Day 2 - 24th of September </h3>
+  <div class="speakers-grid">
+    {speakers.map((speaker) => (
+      <>
+        <img src={speaker.photo} alt={speaker.name} class="speaker-photo" />
+        <div class="speaker-info">
+          <h3>{speaker.name}</h3>
+          <p class="speaker-affiliation">{speaker.affiliation}</p>
+          <p class="speaker-bio">{speaker.bio}</p>
+        </div>
+      </>
+    ))}
+  </div>
+</section>
+
+<style>
+  .day-label {
+    margin-top: 4rem; /* <-- qui, aumenta questo valore */
+    margin-bottom: 0.5rem;
+  }
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: auto 1fr; /* colonna 1: foto, colonna 2: testo */
+    column-gap: 2rem;
+    row-gap: 3rem;
+    margin-top: 1.5rem;
+    align-items: start;
+  }
+
+  .speaker-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .speaker-info h3 {
+    margin: 0 0 0.25rem 0;
+  }
+
+  .speaker-affiliation {
+    font-style: italic;
+    color: #666;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .speaker-bio {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 600px) {
+    .speakers-grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+  }
+</style>
 
     <section id="sponsors">
       <h2>Sponsors</h2>
 
 <div class="sponsors">
   <div class="sponsor-item">
-    <img src="images/ZENTEK_SCI.png" alt="Sponsor 1">
+    <img src="/mmoc2026/images/ZENTEK_SCI.png" alt="Sponsor 1">
   </div>
 
   <!--
