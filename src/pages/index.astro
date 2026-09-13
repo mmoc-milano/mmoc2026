@@ -304,10 +304,9 @@ const speakers = [
     We are proud to announce the following invited speakers for MMOC 2026:
   </p>
 
-
   <h3 class="day-label">Day 1 - 23rd of September</h3>
   <div class="speakers-grid">
-    <img src={`${import.meta.env.BASE_URL}${keynoteSpeaker.photo}`} alt={keynoteSpeaker.name} class="speaker-photo" />
+    <img src={`${import.meta.env.BASE_URL}/${keynoteSpeaker.photo}`} alt={keynoteSpeaker.name} class="speaker-photo" />
     <div class="speaker-info">
       <h3>{keynoteSpeaker.name}</h3>
       <p class="speaker-affiliation">{keynoteSpeaker.affiliation}</p>
@@ -315,11 +314,11 @@ const speakers = [
     </div>
   </div>
 
-  <h3 class="day-label">Day 2 - 24th of September </h3>
+  <h3 class="day-label">Day 2 - 24th of September</h3>
   <div class="speakers-grid">
     {speakers.map((speaker) => (
       <>
-        <img src={speaker.photo} alt={speaker.name} class="speaker-photo" />
+        <img src={`${import.meta.env.BASE_URL}/${speaker.photo}`} alt={speaker.name} class="speaker-photo" />
         <div class="speaker-info">
           <h3>{speaker.name}</h3>
           <p class="speaker-affiliation">{speaker.affiliation}</p>
